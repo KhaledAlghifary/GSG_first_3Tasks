@@ -1,32 +1,32 @@
 <?php
+
+namespace Task3\StudentCourse;
+
 class Student
 {
     public $name;
     public $email;
     public $courses;
-  
+    public readonly int $id;
     
-    public function __construct(public readonly int $id,$name,$email,$courses){
-        $this->name=$name;
-        $this->email=$email;
-        $this->courses=$courses;
-
+    public function __construct(int $id, $name, $email, $courses)
+    {
+        $this->id = $id;
+        $this->name = $name;
+        $this->email = $email;
+        $this->courses = $courses;
     }
-    function __destruct() {
-      }
 }
 
-class Course{
+class Course
+{
     public $name;
-    public function __construct(public readonly int $id,$name){
-        $this->name=$name;
-
+    public readonly int $id;
+    
+    public function __construct(int $id, $name)
+    {
+        $this->id = $id;
+        $this->name = $name;
     }
-    function __destruct() {
-      }
 }
-
-
-
-
 ?>

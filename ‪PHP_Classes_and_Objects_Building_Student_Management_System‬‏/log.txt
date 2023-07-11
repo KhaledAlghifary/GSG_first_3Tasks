@@ -1,0 +1,4 @@
+Added student: ID = 1, Name = Khaled
+Added student: ID = 2, Name = Ahmed
+Updated student: ID = 1, Name = Khaled => Courses
+Deleted student: ID = 2, Name = Ahmed
