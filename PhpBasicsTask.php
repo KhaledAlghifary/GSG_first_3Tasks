@@ -1,97 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>PHP Functions & Arrays Assignment</title>
   <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #4f5b93;
+      margin: 0;
+      padding: 20px;
+    }
 
-  h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+    }
 
-  .question {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+    .card {
+      background-color: #b0b9e5;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-  h2 {
-    color: #333;
-    margin-bottom: 10px;
-  }
+    h2 {
+      margin-bottom: 10px;
+    }
 
-  pre {
-    background-color: #f5f5f5;
-    padding: 10px;
-    border-radius: 5px;
-  }
+    pre {
+      background-color: #231e34 !important;
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+    }
 
-  code {
-    font-family: Consolas, monospace;
-  }
+    code {
+      font-family: Consolas, monospace;
+    }
 
-  .answer {
-    margin-top: 10px;
-  }
+    .result {
+      margin-top: 10px;
+    }
 
-  .answer-label {
-    font-weight: bold;
-  }
+    .result-label {
+      font-weight: bold;
+    }
 
-  .answer-value {
-    color: #333;
-  }
+    .result-value {
+      color: #333;
+    }
 
-  .input-section {
-    margin-bottom: 10px;
-  }
+    .input-section {
+      margin-bottom: 10px;
+    }
 
-  .input-section label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
+    .input-section label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
-  .input-section input {
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-  }
+    .input-section input {
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
 
-  .submit-button {
-    display: block;
-    padding: 8px 16px;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-  }
+    .submit-button {
+      display: block;
+      padding: 8px 16px;
+      border-radius: 5px;
 
-  .submit-button:hover {
-    background-color: #0056b3;
-  }
-</style>
+      background: #515e9b;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
 
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 
 
 </head>
+
 <body>
   <h1>PHP Basics Task</h1>
 
   <?php
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-   
+
     //Q1
     ////Check if the first two characters and last two characters of a given string are the same:
 
@@ -109,7 +111,6 @@
         echo "The first two and last two characters of '$string' are the same.";
       else
         echo "The first two and last two characters of '$string' are not the same.";
-
     }
 
 
@@ -227,7 +228,7 @@
   ?>
 
 
-  <div class="question">
+  <div class="card">
     <h2>Check First and Last Characters</h2>
     <form method="POST">
       <div class="code-block">
@@ -257,7 +258,7 @@
         <label for="firstLastString">String:</label>
         <input type="text" name="firstLastString" id="firstLastString" placeholder="Enter a string" required>
       </div>
-      <button type="submit">Submit</button>
+      <button class="submit-button" type="submit">Submit</button>
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['firstLastString'])) : ?>
         <div class="answer-section">
           <div class="answer">
@@ -272,7 +273,7 @@
     </form>
   </div>
 
-  <div class="question">
+  <div class="card">
     <h2>Starts with "Go"</h2>
     <form method="POST">
       <div class="code-block">
@@ -296,7 +297,7 @@
         <label for="startsWithGoString">String:</label>
         <input type="text" name="startsWithGoString" id="startsWithGoString" placeholder="Enter a string" required>
       </div>
-      <button type="submit">Submit</button>
+      <button class="submit-button" type="submit">Submit</button>
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['startsWithGoString'])) : ?>
         <div class="answer-section">
           <div class="answer">
@@ -311,7 +312,7 @@
     </form>
   </div>
 
-  <div class="question">
+  <div class="card">
     <h2>Is Multiple of 3 or 7</h2>
     <form method="POST">
       <div class="code-block">
@@ -333,7 +334,7 @@
         <label for="multipleNumber">Number:</label>
         <input type="number" name="multipleNumber" id="multipleNumber" placeholder="Enter a number" required>
       </div>
-      <button type="submit">Submit</button>
+      <button class="submit-button" type="submit">Submit</button>
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['multipleNumber'])) : ?>
         <div class="answer-section">
           <div class="answer">
@@ -348,7 +349,7 @@
     </form>
   </div>
 
-  <div class="question">
+  <div class="card">
     <h2>Find the Largest Number</h2>
     <form method="POST">
       <div class="code-block">
@@ -375,7 +376,7 @@
         <label for="largestNum3">Number 3:</label>
         <input type="number" name="largestNum3" id="largestNum3" placeholder="Enter number 3" required>
       </div>
-      <button type="submit">Submit</button>
+      <button class="submit-button" type="submit">Submit</button>
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['largestNum1'], $_POST['largestNum2'], $_POST['largestNum3'])) : ?>
         <div class="answer-section">
           <div class="answer">
@@ -390,7 +391,7 @@
     </form>
   </div>
 
-  <div class="question">
+  <div class="card">
     <h2>Find the Number Nearest to 100</h2>
     <form method="POST">
       <div class="code-block">
@@ -423,7 +424,7 @@
         <label for="nearestNum2">Number 2:</label>
         <input type="number" name="nearestNum2" id="nearestNum2" placeholder="Enter number 2" required>
       </div>
-      <button type="submit">Submit</button>
+      <button class="submit-button" type="submit">Submit</button>
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nearestNum1'], $_POST['nearestNum2'])) : ?>
         <div class="answer-section">
           <div class="answer">
@@ -438,7 +439,7 @@
     </form>
   </div>
 
-  <div class="question">
+  <div class="card">
     <h2>Find the Larger Number in Range</h2>
     <form method="POST">
       <div class="code-block">
@@ -470,7 +471,7 @@
         <label for="rangeNum2">Number 2:</label>
         <input type="number" name="rangeNum2" id="rangeNum2" placeholder="Enter number 2" required>
       </div>
-      <button type="submit">Submit</button>
+      <button class="submit-button" type="submit">Submit</button>
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['rangeNum1'], $_POST['rangeNum2'])) : ?>
         <div class="answer-section">
           <div class="answer">
@@ -485,7 +486,7 @@
     </form>
   </div>
 
-  <div class="question">
+  <div class="card">
     <h2>Count Occurrences of Digits in a String</h2>
     <form method="POST">
       <div class="code-block">
@@ -511,7 +512,7 @@
         <label for="numString">String:</label>
         <input type="text" name="numString" id="numString" placeholder="Enter a string" required>
       </div>
-      <button type="submit">Submit</button>
+      <button class="submit-button" type="submit">Submit</button>
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['numString'])) : ?>
         <div class="answer-section">
           <div class="answer">
@@ -526,7 +527,7 @@
     </form>
   </div>
 
-  <div class="question">
+  <div class="card">
     <h2>Sum of Digits</h2>
     <form method="POST">
       <div class="code-block">
@@ -549,7 +550,7 @@
         <label for="sumNum">Number:</label>
         <input type="number" name="sumNum" id="sumNum" placeholder="Enter a number" required>
       </div>
-      <button type="submit">Submit</button>
+      <button class="submit-button" type="submit">Submit</button>
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sumNum'])) : ?>
         <div class="answer-section">
           <div class="answer">
@@ -564,7 +565,7 @@
     </form>
   </div>
 
-  <div class="question">
+  <div class="card">
     <h2>Reverse String</h2>
     <form method="POST">
       <div class="code-block">
@@ -584,7 +585,7 @@
         <label for="reverseString">String:</label>
         <input type="text" name="reverseString" id="reverseString" placeholder="Enter a string" required>
       </div>
-      <button type="submit">Submit</button>
+      <button class="submit-button" type="submit">Submit</button>
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reverseString'])) : ?>
         <div class="answer-section">
           <div class="answer">
@@ -599,4 +600,5 @@
     </form>
   </div>
 </body>
+
 </html>

@@ -7,19 +7,19 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #4f5b93;
       margin: 0;
       padding: 20px;
     }
 
     h1 {
       text-align: center;
-      color: #333;
+      color: #fff;
       margin-bottom: 20px;
     }
 
     .card {
-      background-color: #fff;
+      background-color: #b0b9e5;
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 5px;
@@ -27,14 +27,14 @@
     }
 
     h2 {
-      color: #333;
       margin-bottom: 10px;
     }
 
     pre {
-      background-color: #f5f5f5;
+      background-color: #231e34 !important;
       padding: 10px;
       border-radius: 5px;
+      color: #fff;
     }
 
     code {
@@ -73,7 +73,8 @@
       display: block;
       padding: 8px 16px;
       border-radius: 5px;
-      background-color: #007bff;
+
+      background: #515e9b;
       color: #fff;
       font-weight: bold;
       border: none;
